@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uwu Furry Workout Plan</title>
+  
+  <!-- Include particles.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Google Fonts for Fancy Title -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #f8f8f8;
+      background-color: #121212;
+      padding: 0;
+      position: relative;
+      overflow: auto;
+      height: 100vh;
+      animation: fadeIn 1s ease-out;
+    }
+
+    /* Particles Background */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 20px;
+      background: linear-gradient(45deg, #1e1e1e, #333333);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      animation: slideIn 1.5s ease-out;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #ff69b4;
+      font-family: 'Roboto Mono', monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #ccc;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    h2 {
+      color: #ff69b4;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 15px;
+      padding: 15px;
+      background: #2c2c2c;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    li:hover {
+      transform: scale(1.05);
+      background-color: #444444;
+    }
+
+    .tips {
+      margin-top: 20px;
+      background: #333;
+      padding: 15px;
+      border-radius: 5px;
+      font-style: italic;
+      color: #ddd;
+      animation: fadeInUp 1s ease-out 0.5s forwards;
+    }
+
+    .furry-workout-img {
+      margin-top: 30px;
+      text-align: center;
+      animation: fadeInUp 1s ease-out 0.7s forwards;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .furry-workout-img img {
+      max-width: 60%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .furry-workout-img img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #ccc;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1.2s forwards;
+    }
+
+    footer a {
+      color: #ff69b4;
+      text-decoration: none;
+    }
+
+    footer span {
+      font-size: 1.2rem;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* Full-Screen Modal Effect */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .modal img {
+      width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Modal animation when clicked */
+    .modal img {
+      transform: scale(1.2);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Particles.js container -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Uwu Furry Workout Plan</h1>
+    <p>Get stronger, fluffier, and cuter with these exercises!</p>
+  </header>
+
+  <section>
+    <h2>Workout Routine</h2>
+    <p>This is just one set! The recommended amount is 3–4 sets for each exercise. </p>
+    <ul>
+      <li>
+        <strong>Fluffy Squats:</strong> 10–12 reps (Squat down, keeping your chest up and knees behind your toes, then return to standing)  
+        <br> Estimated Calories Burned: 10–24  
+      </li>
+      <li>
+        <strong>Furry Push-Ups:</strong> 10–15 reps (Lower yourself to the ground and push back up, keeping your body in a straight line)  
+        <br> Estimated Calories Burned: 14–30  
+      </li>
+      <li>
+        <strong>Fuzzy Shoulder Press:</strong> 10–12 reps (Press dumbbells or any weights above your head while keeping your core engaged)  
+        <br> Estimated Calories Burned: 4–12  
+      </li>
+      <li>
+        <strong>Fluff Rows:</strong> 10–12 reps (Bend forward at the hips, pull weights toward you, and squeeze your back muscles)  
+        <br> Estimated Calories Burned: 10–24  
+      </li>
+      <li>
+        <strong>Bicep Curls (For Strong Paws):</strong> 10–12 reps (Curl weights towards your shoulders, focusing on contracting your biceps)  
+        <br> Estimated Calories Burned: 3–10  
+      </li>
+      <li>
+        <strong>Chest Press (Furry Power):</strong> 10–12 reps (Lie on your back, push weights up above your chest, and lower them back down)  
+        <br> Estimated Calories Burned: 4–12  
+      </li>
+      <li>
+        <strong>Fluff Bike Ride :</strong> 30–60 minutes (Pedal steadily, maintaining a moderate pace to work your legs and cardiovascular system)  
+        <br> Estimated Calories Burned: 240–480  
+      </li>
+    </ul>
+
+    <div class="tips">
+      Tip: Don't forget to hydrate with some paw-some drinks, and take breaks to stretch those fluffy muscles!
+    </div>
+    <div class="tips">
+        Remember, every little bit counts! Even if you only manage 1 or 2 sets today, you're still making progress. Keep going, you're doing great!
+      </div>
+  </section>
+
+  <!-- Furry workout image (clickable) -->
+  <div class="furry-workout-img" onclick="toggleImage()">
+    <img src="image.webp" alt="Furry Wolf Working Out">
+  </div>
+
+  <!-- Modal for enlarged image -->
+  <div id="imageModal" class="modal" onclick="toggleImage()">
+    <img src="image.webp" alt="Furry Wolf Enlarged">
+  </div>
+
+  <footer>
+    <p>&copy; just steal the page and the code idc<span>&#128075; &#128514;</span></p>
+    <p><a href="https://t.me/pluggin112" target="_blank">Contact</a></p>
+    
+  </footer>
+
+  <!-- Audio -->
+  <audio id="audio" src="audio.mp3" preload="auto"></audio>
+
+  <script>
+    const audio = document.getElementById("audio");
+    let isPlaying = false;
+
+    function toggleImage() {
+      const imageModal = document.getElementById("imageModal");
+      const furryImage = document.querySelector(".furry-workout-img img");
+      
+      if (isPlaying) {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlaying = false;
+      }
+
+      if (imageModal.style.display === "flex") {
+        imageModal.style.display = "none";
+        furryImage.style.transform = "scale(1)";
+      } else {
+        imageModal.style.display = "flex";
+        furryImage.style.transform = "scale(1.2)";
+        if (!isPlaying) {
+          audio.play();
+          isPlaying = true;
+        }
+      }
+    }
+
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        shape: {
+          type: 'circle',
+          stroke: {
+            width: 0,
+            color: '#fff'
+          },
+        },
+        color: {
+          value: "#ff69b4"
+        },
+        opacity: {
+          value: 0.5,
+          random: true
+        },
+        size: {
+          value: 3,
+          random: true
+        }
+      }
+    });
+  </script>
+</body>
+</html>
